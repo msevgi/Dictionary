@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">My Dictionary</string>
+    <string name="title_fragment_save_words">Save Word</string>
+    <string name="title_fragment_get_words">Get Words</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="english">English</string>
+    <string name="turkish">Turkish</string>
+    <string name="button_save_text">Save</string>
+    <string name="succes_save_word">Kaydedildi</string>
+    <string name="enter_word">You must enter the words!</string>
+
+</resources>
