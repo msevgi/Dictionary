@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sözlüğüm</string>
+    <string name="title_fragment_save_words">Kelime Ekle</string>
+    <string name="title_fragment_get_words">Kelimelerim</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="english">İngilizce</string>
+    <string name="turkish">Türkçe</string>
+    <string name="button_save_text">Kaydet</string>
+    <string name="succes_save_word">Kaydedildi</string>
+    <string name="enter_word">Kelimeleri giriniz!</string>
+    <string name="warning">Uyarı!</string>
+    <string name="delete_word">Silmek istiyor musun?</string>
+    <string name="search">Search</string>
+
+</resources>

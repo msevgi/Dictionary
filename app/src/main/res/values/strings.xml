@@ -9,9 +9,10 @@
     <string name="english">English</string>
     <string name="turkish">Turkish</string>
     <string name="button_save_text">Save</string>
-    <string name="succes_save_word">Kaydedildi</string>
+    <string name="succes_save_word">Saved</string>
     <string name="enter_word">You must enter the words!</string>
     <string name="warning">Warning!</string>
     <string name="delete_word">Do you want to delete?</string>
+    <string name="search">Search</string>
 
 </resources>
