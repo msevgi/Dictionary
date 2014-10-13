@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import com.msevgi.dictionary.R;
 import com.msevgi.dictionary.model.Words;
+import com.msevgi.dictionary.provider.BusProvider;
+
+import java.util.ArrayList;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -17,8 +20,8 @@ import butterknife.InjectView;
 public class WordsAdapter extends ArrayAdapter<Words> {
    private ViewHolder mViewHolder;
 
-   public WordsAdapter(Context context, int resource, int textViewResourceId, Words[] objects) {
-      super(context, resource, textViewResourceId, objects);
+   public WordsAdapter(Context context, int resource, ArrayList<Words> objects) {
+      super(context, resource, objects);
 
    }
 
@@ -32,15 +35,22 @@ public class WordsAdapter extends ArrayAdapter<Words> {
       else
          mViewHolder = (ViewHolder) convertView.getTag();
 
-      Words mItem = getItem(position);
+      final Words mItem = getItem(position);
       if (mItem != null) {
          mViewHolder.mTextViewEnglish.setText(mItem.getEnglish_word());
          mViewHolder.mTextViewTurkish.setText(mItem.getTurkish_word());
+         convertView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+               BusProvider.getInstance().post(mItem);
+               return false;
+            }
+         });
       }
       return convertView;
    }
 
-   private class ViewHolder {
+   protected final class ViewHolder {
       @InjectView(R.id.textview_turkish_word)
       TextView mTextViewTurkish;
       @InjectView(R.id.textview_english_word)

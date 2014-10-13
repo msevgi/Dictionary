@@ -18,7 +18,7 @@ import com.msevgi.dictionary.helper.MySQLiteOpenHelper;
  */
 public class MyContentProvider extends ContentProvider { // Abstracts the underlying data layer
     // The authority portion of the URI (matches what is defined in manifest).
-    public static final String AUTHORITY = "com.msevgi.mydictionary.provider";
+   public static final String      AUTHORITY                   = "com.msevgi.dictionary.provider";
     // BASE_URI is the URI that identifies the ContentProvider.
     public static final Uri BASE_URI = Uri.parse("content://" + AUTHORITY);
 
