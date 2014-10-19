@@ -24,6 +24,7 @@ public class WordsAdapter extends ArrayAdapter<Words> implements Filterable {
     private ViewHolder mViewHolder;
     private static List<Words> mOriginItmeList;
     private static List<Words> mItemList;
+    private MyFilter mFilter;
 
     public WordsAdapter(Context context, int resource, ArrayList<Words> objects) {
         super(context, resource, objects);
@@ -40,7 +41,7 @@ public class WordsAdapter extends ArrayAdapter<Words> implements Filterable {
         } else
             mViewHolder = (ViewHolder) convertView.getTag();
 
-        final Words mItem = getItem(position);
+        final Words mItem = mItemList.get(position);
         if (mItem != null) {
             mViewHolder.mTextViewEnglish.setText(mItem.getEnglish_word());
             mViewHolder.mTextViewTurkish.setText(mItem.getTurkish_word());
@@ -73,7 +74,10 @@ public class WordsAdapter extends ArrayAdapter<Words> implements Filterable {
 
     @Override
     public Filter getFilter() {
-        return super.getFilter();
+        if (mFilter == null) {
+            mFilter = new MyFilter();
+        }
+        return mFilter;
     }
 
     private class MyFilter extends Filter {
@@ -82,7 +86,7 @@ public class WordsAdapter extends ArrayAdapter<Words> implements Filterable {
         protected FilterResults performFiltering(CharSequence constraint) {
             FilterResults results = new FilterResults();
             String search = constraint.toString();
-            if (!TextUtils.isEmpty(search)) {
+            if (TextUtils.isEmpty(search)) {
                 results.values = mOriginItmeList;
                 results.count = mOriginItmeList.size();
             } else {
@@ -101,7 +105,6 @@ public class WordsAdapter extends ArrayAdapter<Words> implements Filterable {
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
             mItemList = (ArrayList<Words>) results.values;
-            notifyDataSetChanged();
         }
     }
 }

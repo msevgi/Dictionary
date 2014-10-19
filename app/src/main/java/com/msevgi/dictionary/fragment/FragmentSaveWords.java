@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.andexert.library.RippleView;
 import com.msevgi.dictionary.provider.MyContentProvider;
 import com.msevgi.dictionary.helper.MySQLiteOpenHelper;
 import com.msevgi.dictionary.R;
@@ -24,7 +25,7 @@ public class FragmentSaveWords extends BaseFragment implements View.OnClickListe
    @InjectView(R.id.edittext_turkish)
    public EditText mEditTextTurkish;
    @InjectView(R.id.button_save_word)
-   public Button   mButtonSave;
+   public RippleView mButtonSave;
 
    @Override
    public void onViewCreated(View view, @Nullable
