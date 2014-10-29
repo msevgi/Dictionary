@@ -4,6 +4,7 @@
     <string name="app_name">My Dictionary</string>
     <string name="title_fragment_save_words">Save Word</string>
     <string name="title_fragment_get_words">Get Words</string>
+    <string name="title_fragment_set_alarm">Set Alarm</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="english">English</string>
@@ -14,5 +15,7 @@
     <string name="warning">Warning!</string>
     <string name="delete_word">Do you want to delete?</string>
     <string name="search">Search</string>
+    <string name="set_alarm_button">Set Alarm</string>
+    <string name="cancel_alarm">Alarmi iptal et</string>
 
 </resources>

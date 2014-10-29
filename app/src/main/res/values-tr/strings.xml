@@ -4,6 +4,7 @@
     <string name="app_name">Sözlük</string>
     <string name="title_fragment_save_words">Kelime Ekle</string>
     <string name="title_fragment_get_words">Kelimelerim</string>
+    <string name="title_fragment_set_alarm">Alarm Kur</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="english">İngilizce</string>
@@ -14,5 +15,7 @@
     <string name="warning">Uyarı!</string>
     <string name="delete_word">Silmek istiyor musun?</string>
     <string name="search">Ara</string>
+    <string name="set_alarm_button">Alarm Kur</string>
+    <string name="cancel_alarm">Alarmi iptal et</string>
 
 </resources>
